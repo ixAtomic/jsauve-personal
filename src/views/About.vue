@@ -12,7 +12,7 @@
           <v-col cols="auto"
             ><v-btn
               :prepend-icon="'mdi-file-document-outline'"
-              :href="'/public/Jared_Sauve_Resume.pdf'"
+              :href="'/Jared_Sauve_Resume.pdf'"
               target="_blank"
               :download="'Jared Resume'"
               ><v-icon color="primary"></v-icon> Resume
@@ -21,12 +21,14 @@
         </v-row>
       </v-col>
       <v-col class="align-center">
-        <v-img max-height="600" :src="'/public/photos/About.jpg'"> </v-img>
+        <v-img max-height="600" :src="'/photos/About.jpg'"> </v-img>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script setup>
-import * as about from "../../public/About.json";
+import * as about from "@/data/About.json";
+import { useDisplay } from "vuetify";
+const { lgAndUp, lgAndDown } = useDisplay();
 </script>

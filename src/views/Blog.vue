@@ -1,19 +1,45 @@
 <template>
-  <v-container>
+  <v-container v-show="!isBlogPost">
     <v-row>
-      <v-col cols="3" v-for="(card, index) in Cards.Cards" :key="index">
+      <v-col class="text-h2 pt-6 pb-6"> Blog </v-col>
+    </v-row>
+    <v-row :class="lgAndDown ? 'flex-column justify-center align-center' : ''">
+      <v-col
+        :cols="lgAndUp ? 3 : 7"
+        v-for="(card, index) in Cards.Cards"
+        :key="index"
+      >
         <v-card
-          :image="card.Image"
+          link
+          @click="GetPost(index)"
           :title="card.Title"
           :text="card.Summary"
-          :key="key"
         >
+          <v-img :src="card.Image"></v-img>
         </v-card>
       </v-col>
     </v-row>
   </v-container>
+  <BlogPost
+    v-model="isBlogPost"
+    :index="SelectedPost"
+    v-if="isBlogPost"
+  ></BlogPost>
 </template>
 
-<script setup>
-import * as Cards from "../../public/Cards.json";
+<script lang="ts" setup>
+import * as Cards from "@/data/Cards.json";
+import BlogPost from "./BlogPost.vue";
+import { useDisplay } from "vuetify";
+import { Ref, ref } from "vue";
+
+const isBlogPost: Ref<Boolean> = ref(false);
+const SelectedPost: Ref<number | null> = ref(null);
+
+function GetPost(PostIndex: number) {
+  isBlogPost.value = true;
+  SelectedPost.value = PostIndex;
+}
+
+const { lgAndUp, lgAndDown } = useDisplay();
 </script>

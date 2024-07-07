@@ -49,7 +49,7 @@
         <v-img
           max-height="750"
           max-width="750"
-          :src="'/public/photos/main.png'"
+          :src="'/photos/main.png'"
         ></v-img>
       </v-col>
     </v-row>

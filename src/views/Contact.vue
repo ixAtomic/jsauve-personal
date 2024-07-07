@@ -21,5 +21,7 @@
 </template>
 
 <script setup>
-import * as contact from "../../public/Contact.json";
+import * as contact from "@/data/Contact.json";
+import { useDisplay } from "vuetify";
+const { lgAndUp, lgAndDown } = useDisplay();
 </script>
