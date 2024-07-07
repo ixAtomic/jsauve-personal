@@ -22,7 +22,7 @@
       <v-img
         class="align-self-end"
         max-height="800"
-        :src="'/public/photos/main.png'"
+        :src="'/photos/main.png'"
       ></v-img>
     </v-row>
 
