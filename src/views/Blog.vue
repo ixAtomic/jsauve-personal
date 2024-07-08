@@ -3,9 +3,9 @@
     <v-row>
       <v-col class="text-h2 pt-6 pb-6"> Blog </v-col>
     </v-row>
-    <v-row :class="lgAndDown ? 'flex-column justify-center align-center' : ''">
+    <v-row :class="mdAndDown ? 'flex-column justify-center align-center' : ''">
       <v-col
-        :cols="lgAndUp ? 3 : 7"
+        :cols="mdAndUp ? 3 : 7"
         v-for="(card, index) in Cards.Cards"
         :key="index"
       >
@@ -41,5 +41,5 @@ function GetPost(PostIndex: number) {
   SelectedPost.value = PostIndex;
 }
 
-const { lgAndUp, lgAndDown } = useDisplay();
+const { mdAndUp, mdAndDown } = useDisplay();
 </script>
