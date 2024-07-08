@@ -14,7 +14,7 @@
               <v-btn v-if="key == 'Email'" :href="`mailto:${value}`">{{
                 key
               }}</v-btn>
-              <v-btn v-else target="_blank" :href="`https:\\${value}`">{{
+              <v-btn v-else target="_blank" :href="'//' + value">{{
                 key
               }}</v-btn>
             </div>
