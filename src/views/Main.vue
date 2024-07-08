@@ -10,7 +10,7 @@
           <v-col class="text-h4">Jared Sauve</v-col>
           <v-col class="text-body-1">Software Engineer</v-col>
           <v-col class="text-h2 pb-3">
-            I Am A Talented Full-Stack Engineer From Michigan
+            Hello, I Am A Talented Full-Stack Engineer From Michigan
           </v-col>
           <v-col>
             <v-btn @click="model = 'Contact'" color="info" width="125"
@@ -36,7 +36,7 @@
           <v-col class="text-h4">Jared Sauve</v-col>
           <v-col class="text-body-1">Software Engineer</v-col>
           <v-col class="text-h5 pb-2">
-            I Am A Talented Full-Stack Engineer From Michigan
+            Hello, I Am A Talented Full-Stack Engineer From Michigan
           </v-col>
           <v-col>
             <v-btn @click="model = 'Contact'" color="info" width="125"
