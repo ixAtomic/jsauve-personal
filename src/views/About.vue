@@ -4,9 +4,9 @@
       <v-col>
         <v-row dense class="flex-column">
           <v-col class="text-h2 pb-6">About Me</v-col>
-          <v-col class="text-body-1">{{ about.About }}</v-col>
+          <v-col class="text-body-1 pb-8">{{ about.About }}</v-col>
           <v-col class="text-h4">Education</v-col>
-          <v-col class="text-body-1">{{ about.Education }}</v-col>
+          <v-col class="text-body-1 pb-8">{{ about.Education }}</v-col>
           <v-col class="text-h4">Conclusion</v-col>
           <v-col class="text-body-1 pb-6">{{ about.FIN }}</v-col>
           <v-col cols="auto"
