@@ -11,7 +11,12 @@
             class="text-body-1"
           >
             <div v-for="(value, key) in contactType" :key="key">
-              <strong>{{ key }}:</strong> {{ value }}
+              <v-btn v-if="key == 'Email'" :href="`mailto:${value}`">{{
+                key
+              }}</v-btn>
+              <v-btn v-else target="_blank" :href="`https:\\${value}`">{{
+                key
+              }}</v-btn>
             </div>
           </v-col>
         </v-row>
