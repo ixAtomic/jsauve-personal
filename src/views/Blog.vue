@@ -14,6 +14,9 @@
           @click="GetPost(index)"
           :title="card.Title"
           :text="card.Summary"
+          :elevation="24"
+          height="400px"
+          class="full-width"
         >
           <v-img :src="card.Image"></v-img>
         </v-card>
@@ -43,3 +46,8 @@ function GetPost(PostIndex: number) {
 
 const { mdAndUp, mdAndDown } = useDisplay();
 </script>
+<style scoped>
+.full-width {
+  width: 100%;
+}
+</style>
